@@ -1,0 +1,58 @@
+on:
+  schedule:
+    - cron: "0 9 * * *" # todo dia às 06:00 de Brasília
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/**, .github/workflows/atualizar.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: interacoes-perfil
+  cancel-in-progress: false
+
+jobs:
+  recentes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Atualizar seções dinâmicas
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/perfil.py iniciar
+
+      - name: Salvar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza repositórios recentes"
+            git push
+          fi
+
+  cobrinha:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gerar animação do gráfico de contribuições
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Publicar na branch output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
