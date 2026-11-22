@@ -2,10 +2,10 @@
 
 Uso (chamado pelos workflows em .github/workflows):
   python scripts/perfil.py recentes   -> lista de repositórios mexidos recentemente
-  python scripts/perfil.py issue      -> processa uma issue do jogo da velha ou do livro de visitas
+  python scripts/perfil.py issue      -> processa uma jogada do jogo da velha
 
 Sem dependências externas. Os dados da issue chegam por variáveis de ambiente
-(ISSUE_TITLE, ISSUE_BODY, ISSUE_USER), nunca interpolados no shell.
+(ISSUE_TITLE, ISSUE_USER), nunca interpolados no shell.
 A resposta para a pessoa é escrita em resposta.md, que o workflow comenta na issue.
 """
 import json
@@ -169,29 +169,11 @@ def jogar_velha(acao: str, usuario: str) -> None:
     responder(mensagem + f"\n\nVeja o tabuleiro: https://github.com/{USUARIO}")
 
 
-# ---------- Livro de visitas (dica 3) ----------
-
-def assinar_livro(usuario: str, corpo: str) -> None:
-    texto = limpar(corpo, 200)
-    if not texto or texto.startswith("Escreva sua mensagem aqui"):
-        return responder("A mensagem veio vazia. Abra outra issue e escreva algo no corpo dela. 🙂")
-    livro = ler_json("livro.json", [])
-    livro.append({"usuario": usuario, "mensagem": texto,
-                  "data": datetime.now(timezone.utc).strftime("%d/%m/%Y")})
-    salvar_json("livro.json", livro)
-    linhas = [f"> **[@{a['usuario']}](https://github.com/{a['usuario']})** · {a['data']}  \n> {a['mensagem']}"
-              for a in livro[-8:][::-1]]
-    trocar_secao("livro", "\n\n".join(linhas) + f"\n\n<sub>{len(livro)} assinatura(s) no total.</sub>")
-    responder(f"Obrigado por assinar o livro de visitas! 💙\n\nSua mensagem: https://github.com/{USUARIO}")
-
-
 def issue() -> None:
     titulo = (os.environ.get("ISSUE_TITLE") or "").strip()
     usuario = re.sub(r"[^A-Za-z0-9-]", "", os.environ.get("ISSUE_USER") or "")[:39]
     if titulo.startswith("velha|"):
         jogar_velha(titulo[len("velha|"):], usuario)
-    elif titulo.startswith("livro|"):
-        assinar_livro(usuario, os.environ.get("ISSUE_BODY") or "")
 
 
 def iniciar() -> None:

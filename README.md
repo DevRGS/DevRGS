@@ -63,13 +63,7 @@ Gosto de projetos que **funcionam sem servidor**: o navegador lê APIs públicas
 ### 🕒 Mexi recentemente em
 
 <!-- recentes:inicio -->
-- [**Aprendendo-linguagens**](https://github.com/DevRGS/Aprendendo-linguagens) · [abrir](https://devrgs.github.io/Aprendendo-linguagens/) · _19/11/2026_
-- [**sheet-finance**](https://github.com/DevRGS/sheet-finance) · [abrir](https://devrgs.github.io/sheet-finance/) · _18/11/2026_
-- [**site-kau**](https://github.com/DevRGS/site-kau) · [abrir](https://kalix-imports.vercel.app) · _28/10/2026_
-- [**segundo-turno**](https://github.com/DevRGS/segundo-turno) · [abrir](https://devrgs.github.io/segundo-turno/) · _25/10/2026_
-- [**cp-explorer-bao**](https://github.com/DevRGS/cp-explorer-bao) · [abrir](https://devrgs.github.io/cp-explorer-bao/) · _03/09/2026_
-
-<sub>Atualizado automaticamente em 22/11/2026.</sub>
+_Esta lista é atualizada automaticamente todo dia pelo GitHub Actions._
 <!-- recentes:fim -->
 
 ## 📊 Estatísticas
@@ -97,27 +91,8 @@ Gosto de projetos que **funcionam sem servidor**: o navegador lê APIs públicas
 Escolha uma casa vazia, clique nela e envie a issue que abrir (é só apertar **Submit new issue**). Em menos de um minuto o GitHub Actions registra sua jogada e passa a vez para o próximo visitante.
 
 <!-- velha:inicio -->
-É a vez do ⭕
-
-| | | |
-|:-:|:-:|:-:|
-| [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C0&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C1&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | ❌ |
-| [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C3&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C4&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C5&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) |
-| [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C6&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C7&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C8&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) |
-
-Placar geral: ❌ 0 · ⭕ 0 · 🤝 0
-
-Últimas jogadas: ❌ [@DevRGS](https://github.com/DevRGS)
+_O tabuleiro aparece aqui depois da primeira execução do GitHub Actions._
 <!-- velha:fim -->
-
-<!-- Dica 3 (JasonEtco): livro de visitas -->
-## 📝 Livro de visitas
-
-Passou por aqui? [**Deixe uma mensagem**](https://github.com/DevRGS/DevRGS/issues/new?title=livro%7Cassinar&body=Escreva+sua+mensagem+aqui+%28at%C3%A9+200+caracteres%29) com uma piada, uma curiosidade ou um oi. As mais recentes aparecem abaixo.
-
-<!-- livro:inicio -->
-_Ainda sem assinaturas. Seja a primeira pessoa!_
-<!-- livro:fim -->
 
 <!-- Dica 8 (natemoo-re): "tocando agora" no Spotify.
 Para ativar: faça o deploy do https://github.com/novatorem/novatorem na Vercel com suas credenciais
