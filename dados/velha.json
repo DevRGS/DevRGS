@@ -1,0 +1,26 @@
+{
+  "tabuleiro": [
+    " ",
+    " ",
+    "X",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ],
+  "vez": "O",
+  "jogadas": [
+    {
+      "usuario": "DevRGS",
+      "peca": "X",
+      "casa": 2
+    }
+  ],
+  "placar": {
+    "X": 0,
+    "O": 0,
+    "velha": 0
+  }
+}

@@ -97,15 +97,17 @@ Gosto de projetos que **funcionam sem servidor**: o navegador lê APIs públicas
 Escolha uma casa vazia, clique nela e envie a issue que abrir (é só apertar **Submit new issue**). Em menos de um minuto o GitHub Actions registra sua jogada e passa a vez para o próximo visitante.
 
 <!-- velha:inicio -->
-É a vez do ❌
+É a vez do ⭕
 
 | | | |
 |:-:|:-:|:-:|
-| [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C0&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C1&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C2&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) |
+| [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C0&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C1&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | ❌ |
 | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C3&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C4&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C5&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) |
 | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C6&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C7&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) | [⬜](https://github.com/DevRGS/DevRGS/issues/new?title=velha%7Cjogar%7C8&body=S%C3%B3%20clicar%20em%20Submit%20new%20issue.%20O%20GitHub%20Actions%20faz%20o%20resto%21) |
 
 Placar geral: ❌ 0 · ⭕ 0 · 🤝 0
+
+Últimas jogadas: ❌ [@DevRGS](https://github.com/DevRGS)
 <!-- velha:fim -->
 
 <!-- Dica 3 (JasonEtco): livro de visitas -->
