@@ -1,0 +1,51 @@
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: interacoes-perfil
+  cancel-in-progress: false
+
+jobs:
+  processar:
+    if: startsWith(github.event.issue.title, 'velha|') || startsWith(github.event.issue.title, 'livro|')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Processar issue
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+        run: python scripts/perfil.py issue
+
+      - name: Salvar alterações
+        env:
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md dados/
+          if ! git diff --cached --quiet; then
+            git commit -m "Interação de @${ISSUE_USER}"
+            git push
+          fi
+
+      - name: Responder e fechar a issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMERO: ${{ github.event.issue.number }}
+        run: |
+          [ -f resposta.md ] || echo "Algo deu errado ao processar. Tente novamente em instantes." > resposta.md
+          gh issue comment "$NUMERO" --repo "$GITHUB_REPOSITORY" --body-file resposta.md
+          gh issue close "$NUMERO" --repo "$GITHUB_REPOSITORY"
