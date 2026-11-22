@@ -1,3 +1,7 @@
+# Jogo da velha: cada issue com título "velha|..." vira uma jogada no README,
+# recebe uma resposta e é fechada.
+name: Interações do perfil
+
 on:
   issues:
     types: [opened]
@@ -12,7 +16,7 @@ concurrency:
 
 jobs:
   processar:
-    if: startsWith(github.event.issue.title, 'velha|') || startsWith(github.event.issue.title, 'livro|')
+    if: startsWith(github.event.issue.title, 'velha|')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +28,6 @@ jobs:
       - name: Processar issue
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
-          ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_USER: ${{ github.event.issue.user.login }}
         run: python scripts/perfil.py issue
 
