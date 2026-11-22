@@ -41,13 +41,16 @@ jobs:
   cobrinha:
     runs-on: ubuntu-latest
     steps:
-      - name: Gerar animação do gráfico de contribuições
-        uses: Platane/snk@v3
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+          python-version: "3.12"
+
+      - name: Gerar cobrinha que cresce
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/cobrinha.py dist
 
       - name: Publicar na branch output
         uses: crazy-max/ghaction-github-pages@v4
