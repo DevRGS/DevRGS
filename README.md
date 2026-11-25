@@ -69,7 +69,7 @@ Gosto de projetos que **funcionam sem servidor**: o navegador lê APIs públicas
 - [**segundo-turno**](https://github.com/DevRGS/segundo-turno) · [abrir](https://devrgs.github.io/segundo-turno/) · _25/10/2026_
 - [**cp-explorer-bao**](https://github.com/DevRGS/cp-explorer-bao) · [abrir](https://devrgs.github.io/cp-explorer-bao/) · _03/09/2026_
 
-<sub>Atualizado automaticamente em 24/11/2026.</sub>
+<sub>Atualizado automaticamente em 25/11/2026.</sub>
 <!-- recentes:fim -->
 
 ## 📊 Estatísticas
